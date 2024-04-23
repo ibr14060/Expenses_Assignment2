@@ -23,7 +23,7 @@ class HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    fetchExpenses(); // Fetch expenses when the page is initialized
+    fetchExpenses();
   }
 
   Future<void> fetchExpenses() async {
@@ -65,7 +65,7 @@ class HomePageState extends State<HomePage> {
 
       if (response.statusCode == 200) {
         print('Expense added successfully');
-        fetchExpenses(); // Refresh expenses after adding a new one
+        fetchExpenses();
       } else {
         print('Failed to add expense: ${response.statusCode}');
       }
@@ -83,7 +83,7 @@ class HomePageState extends State<HomePage> {
 
       if (response.statusCode == 200) {
         print('Expense deleted successfully');
-        fetchExpenses(); // Refresh expenses after deleting one
+        fetchExpenses();
       } else {
         print('Failed to delete expense: ${response.statusCode}');
       }
@@ -114,8 +114,7 @@ class HomePageState extends State<HomePage> {
 
               await showModalBottomSheet(
                 context: context,
-                isScrollControlled:
-                    true, // Ensure the bottom sheet occupies full height
+                isScrollControlled: true,
                 builder: (BuildContext context) {
                   return SingleChildScrollView(
                     padding: EdgeInsets.only(
@@ -262,8 +261,7 @@ class HomePageState extends State<HomePage> {
 
               await showModalBottomSheet(
                 context: context,
-                isScrollControlled:
-                    true, // Ensure the bottom sheet occupies full height
+                isScrollControlled: true,
                 builder: (BuildContext context) {
                   return SingleChildScrollView(
                     padding: EdgeInsets.only(

@@ -11,8 +11,7 @@ class FirstPage extends StatelessWidget {
           Image.network(
             'https://www.incharge.org/wp-content/uploads/2015/06/Cutting-Expenses.gif',
             fit: BoxFit.cover,
-            width:
-                MediaQuery.of(context).size.width * 1.4, // Decrease width here
+            width: MediaQuery.of(context).size.width * 1.4,
             height: double.infinity,
           ),
           Positioned(
